@@ -1,26 +1,22 @@
-import {Text, View, SafeAreaView, StyleSheet} from 'react-native';
+import {Text, View, SafeAreaView, StyleSheet, Image} from 'react-native';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.appContainer}>
-      <View>
-        <Text style={styles.logoContainer}>Health Stats</Text>
-      </View>
+    <SafeAreaView style={styles.container}>
+      <Image source={require('../assets/heartl.png')} style={styles.logoContainer} />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  appContainer: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black',
+    backgroundColor: '#1A7973',
   },
   logoContainer:{
-    fontSize: 36,
-    color: 'red',
-    fontWeight: 'bold',
-
+    width: 100,
+    height: 100,
   }
 });
