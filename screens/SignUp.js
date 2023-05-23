@@ -1,22 +1,36 @@
-import {Text, SafeAreaView, StyleSheet, View, TextInput} from 'react-native';
+import {
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.textContainer}>
         <Text style={styles.text}>Sign up now</Text>
-        <Text style={styles.textPara}>Please fill the details and create account</Text>
+        <Text style={styles.textPara}>
+          Please fill the details and create account
+        </Text>
       </View>
 
       <View style={styles.inputContainer}>
-      <TextInput
-            style={styles.textInput}
-            placeholder="Name"
-          />
-          <TextInput
-            style={styles.textInput}
-            placeholder="Enter Your Email"
-          />
+        <TextInput style={styles.textInput} placeholder="Name" />
+        <TextInput style={styles.textInput} placeholder="Enter Your Email" />
+        <TextInput style={styles.textInput} placeholder="Password" />
+        <TextInput style={styles.textInput} placeholder="Confirm Password" />
+        <TextInput style={styles.textInput} placeholder="Date Of Birth" />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.textBtn}>Submit</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.loginText}>
+        <Text style={styles.accntText}>Already Have An Account?</Text>
+        <Text style={styles.loginLink}>Login</Text>
       </View>
     </SafeAreaView>
   );
@@ -37,10 +51,10 @@ const styles = StyleSheet.create({
   textPara: {
     fontSize: 18,
     color: '#7D848D',
-    marginTop: 12
+    marginTop: 12,
   },
   textContainer: {
-    alignItems: 'center'
+    alignItems: 'center',
   },
   inputContainer: {
     marginTop: 20,
@@ -53,4 +67,30 @@ const styles = StyleSheet.create({
     marginTop: 20,
     padding: 10,
   },
+  button: {
+    padding: 8,
+    borderRadius: 16,
+    backgroundColor: '#1A7973',
+    marginTop: 30,
+  },
+  textBtn: {
+    fontSize: 18,
+    padding: 12,
+    textAlign: 'center',
+    color: 'white',
+  },
+  loginText: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 30
+  },
+  accntText: {
+    fontSize: 15,
+    color: '#000000'
+  },
+  loginLink: {
+    fontSize: 15,
+    color: '#1A7973',
+    marginLeft: 8
+  }
 });
