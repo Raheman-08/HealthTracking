@@ -45,13 +45,14 @@ const styles = StyleSheet.create({
   text: {
     color: 'black',
     fontSize: 28,
-    fontWeight: 'bold',
+    fontFamily: "Urbanist-Bold",
     marginTop: 18,
   },
   textPara: {
     fontSize: 18,
     color: '#7D848D',
     marginTop: 12,
+    fontFamily: "Urbanist-Regular"
   },
   textContainer: {
     alignItems: 'center',
@@ -66,6 +67,7 @@ const styles = StyleSheet.create({
     height: 56,
     marginTop: 20,
     padding: 10,
+    fontFamily: "Urbanist-Regular"
   },
   button: {
     padding: 8,
@@ -78,6 +80,7 @@ const styles = StyleSheet.create({
     padding: 12,
     textAlign: 'center',
     color: 'white',
+    fontFamily: "Urbanist-Bold"
   },
   loginText: {
     flexDirection: 'row',
@@ -86,11 +89,13 @@ const styles = StyleSheet.create({
   },
   accntText: {
     fontSize: 15,
-    color: '#000000'
+    color: '#000000',
+    fontFamily: "Urbanist-SemiBold"
   },
   loginLink: {
     fontSize: 15,
     color: '#1A7973',
-    marginLeft: 8
+    marginLeft: 8,
+    fontFamily: "Urbanist-SemiBold"
   }
 });

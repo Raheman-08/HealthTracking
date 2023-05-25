@@ -42,13 +42,14 @@ import {
     text: {
       color: 'black',
       fontSize: 28,
-      fontWeight: 'bold',
       marginTop: 18,
+      fontFamily: "Urbanist-Bold"
     },
     textPara: {
       fontSize: 18,
       color: '#7D848D',
       marginTop: 12,
+      fontFamily: "Urbanist-Regular"
     },
     textContainer: {
       alignItems: 'center',
@@ -63,6 +64,7 @@ import {
       height: 56,
       marginTop: 20,
       padding: 10,
+      fontFamily: "Urbanist-Regular"
     },
     button: {
       padding: 8,
@@ -75,20 +77,23 @@ import {
       padding: 12,
       textAlign: 'center',
       color: 'white',
+      fontFamily: "Urbanist-Bold"
     },
     loginText: {
       flexDirection: 'row',
       justifyContent: 'center',
-      marginTop: 30
+      marginTop: 30,
     },
     accntText: {
       fontSize: 15,
-      color: '#000000'
+      color: '#000000',
+      fontFamily: "Urbanist-Bold"
     },
     loginLink: {
       fontSize: 15,
       color: '#1A7973',
-      marginLeft: 8
+      marginLeft: 8,
+      fontFamily: "Urbanist-Bold"
     }
   });
   
