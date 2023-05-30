@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "rnpm": {
-    "assets" : [
-    "./assets/fonts/"
+    "assets": [
+      "./assets/fonts/"
     ]
   },
   "scripts": {
@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.71.8"
+    "react-native": "0.71.8",
+    "react-native-user-avatar": "^1.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
