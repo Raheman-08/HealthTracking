@@ -11,18 +11,19 @@ import {
   FlatList,
 } from 'react-native';
 import UserAvatar from 'react-native-user-avatar';
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
-const Card = ({item}) => {
-  <Text>{item.text}</Text>
-}
+// const Card = ({item}) => {
+//   <Text>{item.text}</Text>
+// }
 
 export default function App() {
 
-  const [data, setData] = useState ([
-    {
-      text: 'Hello'
-    }
-  ]);
+  // const [data, setData] = useState ([
+  //   {
+  //     text: 'Hello'
+  //   }
+  // ]);
 
   
   return (
@@ -40,11 +41,16 @@ export default function App() {
         <TextInput style={styles.SearchBar} placeholder="Search" />
       </View>
 
-      <View style={styles.contentContainer}>
+      <View style={styles.contentHeading}>
         <Text style={styles.dataHeading}>Health Data</Text>
-       
       </View>
-      <FlatList data={data} renderItem={Card}/>
+
+      <View style={styles.containerBox}>
+        <View style={styles.dataBox}>
+          <Ionicons name='heart' style={styles.iconHeading} />
+          <Text style={styles.iconHeading}>Heart Rate</Text>
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
@@ -87,12 +93,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
     paddingLeft: 20,
   },
-  contentContainer: {
+  contentHeading: {
     marginTop: 18
   },
   dataHeading: {
-    fontSize: 22,
+    fontSize: 26,
     fontFamily: 'Urbanist-Bold',
-    color: '#000000'
+    color: '#1A7973'
   },
+  containerBox: {
+    marginTop: 10,
+    flexDirection: 'row'
+  },
+  dataBox: {
+    borderRadius: 15,
+    backgroundColor: '#000000',
+    padding: 14
+  },
+  measureType: {
+    fontSize: 20,
+    fontFamily: 'Urbanist-Medium',
+    color: 'white'
+  },
+  iconHeading: {
+    fontSize: 24,
+    color: '#1A7973'
+  }
 });
