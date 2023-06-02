@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import {
   Text,
   SafeAreaView,
@@ -9,23 +9,26 @@ import {
   Platform,
   Image,
   FlatList,
+  StatusBar,
 } from 'react-native';
 import UserAvatar from 'react-native-user-avatar';
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import Foundation from 'react-native-vector-icons/Foundation'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import Entypo from 'react-native-vector-icons/Entypo'
 
 // const Card = ({item}) => {
 //   <Text>{item.text}</Text>
 // }
 
 export default function App() {
-
   // const [data, setData] = useState ([
   //   {
   //     text: 'Hello'
   //   }
   // ]);
 
-  
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -34,11 +37,15 @@ export default function App() {
       </View>
       <View style={styles.textHeader}>
         <Text style={styles.para}>Welcome Back</Text>
-        <Text style={styles.header}>Raheman Ali</Text>
+        <Text style={styles.txtHeader}>Raheman Ali</Text>
       </View>
 
       <View style={styles.search}>
-        <TextInput style={styles.SearchBar} placeholder="Search" />
+        <TextInput
+          style={styles.SearchBar}
+          placeholder="Search"
+          placeholderTextColor="#fff"
+        />
       </View>
 
       <View style={styles.contentHeading}>
@@ -47,8 +54,39 @@ export default function App() {
 
       <View style={styles.containerBox}>
         <View style={styles.dataBox}>
-          <Ionicons name='heart' style={styles.iconHeading} />
-          <Text style={styles.iconHeading}>Heart Rate</Text>
+          <Ionicons name="heart" style={styles.iconHeading} />
+          <Text style={styles.measureHeading}>Heart Rate</Text>
+          <Text style={styles.healthData}>40</Text>
+          <Text style={styles.para}>bpm</Text>
+        </View>
+
+        <View style={styles.dataBoxe}>
+          <Fontisto
+            name="blood-drop"
+            style={styles.iconHeading}
+          />
+          <Text style={styles.measureHeading}>Blood Oxygen</Text>
+          <Text style={styles.healthData}>100</Text>
+          <Text style={styles.para}>spo2</Text>
+        </View>
+      </View>
+
+      <View style={styles.containerBox}>
+        <View style={styles.dataBox}>
+          <Entypo name="flash" style={styles.iconHeading} />
+          <Text style={styles.measureHeading}>Stress Level</Text>
+          <Text style={styles.healthData}>40</Text>
+          <Text style={styles.para}>bpm</Text>
+        </View>
+
+        <View style={styles.dataBoxe}>
+          <Foundation
+            name="foot"
+            style={styles.iconHeading}
+          />
+          <Text style={styles.stepmeasureHeading}>Your Steps</Text>
+          <Text style={styles.healthData}>100</Text>
+          <Text style={styles.para}>steps</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -60,6 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 20,
     paddingHorizontal: 16,
+    backgroundColor: 'black',
   },
   header: {
     flexDirection: 'row',
@@ -76,47 +115,76 @@ const styles = StyleSheet.create({
     fontFamily: 'Urbanist-Medium',
     color: '#7E848D',
   },
-  header: {
+  txtHeader: {
     fontSize: 30,
-    color: '#000000',
+    color: '#ffffff',
     fontFamily: 'Urbanist-Bold',
   },
   SearchBar: {
     height: 52,
     width: '100%',
     borderWidth: 1,
-    borderColor: '#8991A4',
+    // borderColor: '#8991A4',
     borderRadius: 16,
     padding: 8,
     marginTop: 15,
     fontFamily: 'Urbanist-Medium',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#262626',
     paddingLeft: 20,
   },
   contentHeading: {
-    marginTop: 18
+    marginTop: 18,
   },
   dataHeading: {
     fontSize: 26,
     fontFamily: 'Urbanist-Bold',
-    color: '#1A7973'
+    color: '#ffffff',
   },
   containerBox: {
     marginTop: 10,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   dataBox: {
     borderRadius: 15,
-    backgroundColor: '#000000',
-    padding: 14
+    backgroundColor: '#1A1A1A',
+    padding: 24,
+    marginTop: 10,
+    paddingHorizontal: 20,
+  },
+  dataBoxe: {
+    borderRadius: 15,
+    backgroundColor: '#1A1A1A',
+    padding: 24,
+    marginTop: 10,
+    paddingHorizontal: 20,
+    marginLeft: 17,
   },
   measureType: {
     fontSize: 20,
     fontFamily: 'Urbanist-Medium',
-    color: 'white'
+    color: 'white',
   },
   iconHeading: {
-    fontSize: 24,
-    color: '#1A7973'
-  }
+    fontSize: 35,
+    color: '#FF3559',
+  },
+  measureHeading: {
+    fontSize: 25,
+    fontFamily: 'Urbanist-SemiBold',
+    color: 'white',
+    marginTop: 10,
+  },
+  stepmeasureHeading: {
+    fontSize: 25,
+    fontFamily: 'Urbanist-SemiBold',
+    color: 'white',
+    marginTop: 10,
+    width: 150
+  },
+  healthData: {
+    fontSize: 30,
+    fontFamily: 'Urbanist-Bold',
+    color: 'white',
+    marginTop: 15,
+  },
 });
