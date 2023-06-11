@@ -23,11 +23,26 @@ import Entypo from 'react-native-vector-icons/Entypo'
 // }
 
 export default function App() {
-  // const [data, setData] = useState ([
-  //   {
-  //     text: 'Hello'
-  //   }
-  // ]);
+
+  const card = [
+    {
+      Measuretype: 'Heart Rate',
+      Measurement: '40',
+      Unit: 'BPM',
+    },
+
+    {
+      Measuretype: 'Blood Oxygen',
+      Measurement: '100',
+      Unit: 'SPO2',
+    },
+
+    {
+      Measuretype: 'Stress Level',
+      Measurement: '100',
+      Unit: 'SPO2',
+    }
+  ];
 
   return (
     <SafeAreaView style={styles.container}>
